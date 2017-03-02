@@ -51,7 +51,6 @@ class Index extends Component {
             <div><a className="github-fork-ribbon" href="https://github.com/edwardfhsiao/mengox" alt="Edward Xiao MengoX mengox" rel="nofollow">Fork me on Github</a></div>
             <div className="height-10"></div>
             <div className="height-10"></div>
-            <div>This Project is enlightened by <a href="https://github.com/embbnux/kails" className="blue-link">embbnux/Kails</a> and <a href="https://github.com/ecmadao/hacknical" className="blue-link">ecmadao/hacknical</a>, which are fantastic open source projects</div>
             <ReactMarkdown source={indexContent} className="markdown" />
           </div>
           <div className="push"></div>
