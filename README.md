@@ -16,6 +16,7 @@ npm i
 Migrate initial data
 
 ```sh
+npm run migrate_down
 npm run migrate_up
 ```
 
