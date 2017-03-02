@@ -150,7 +150,7 @@ class ArticleList extends Component {
             <div className="my-button my-button--blue" onClick={this.go.bind(this, '/article_categories')}>{LANG_NAV['article-category']}</div>
           );
         }
-        if (articleCategoryList.length){
+        if (!_.isNull(articleCategoryList) && articleCategoryList.length){
           articleCategoryNavListHtml = articleCategoryList.map((item, key) => {
             let active = false;
             if (articleCategory == item.uniqueKey){
@@ -171,7 +171,7 @@ class ArticleList extends Component {
            {articleCategoryNavListHtml}
           </div>
         );
-        if (articleList.length){
+        if (!_.isNull(articleList) && articleList.length){
           articleListHtml = articleList.map((item, key) => {
             return (
               <ArticleItem

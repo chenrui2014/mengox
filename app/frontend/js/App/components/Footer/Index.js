@@ -47,11 +47,8 @@ class Footer extends Component {
     return(
       <div className={`footer ${className}`}>
         <div className='footer-content'>
-          <div className="copyright al-center">Copyright © Edward Xiao</div>
+          <div className="copyright al-center">Copyright © <a href="https://edwardxiao.com" className="hover-underline">Edward Xiao</a></div>
           <div className="height-10"></div>
-          <a className="github-button" href="https://github.com/edwardfhsiao/mengox" data-count-href="/edwardfhsiao/mengox/stargazers" data-count-api="/repos/edwardfhsiao/mengox#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star edwardfhsiao/mengox on GitHub" rel="nofollow">
-            Star
-          </a>
         </div>
       </div>
     );

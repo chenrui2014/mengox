@@ -14,49 +14,55 @@ var config = module.exports = {
     index: PATH.ROOT_PATH + 'app/frontend/js/index.js',
   },
   module: {
-    rules: [/*{
-      enforce: 'pre',
-      test: /\.js?$/,
-      exclude: /node_modules/,
-      use: [{ loader: 'eslint-loader', options: {} }],
-    }, */{
-      test: /\.jsx?$/,
-      exclude: /(node_modules)/,
-      use: [{ loader: 'babel-loader', options: { presets: ['es2015', 'react', 'stage-2'] } }],
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf)\??.*$/,
-      use: 'url-loader?limit=8192&name=font/[name].[ext]'
-    }, {
-      test: /\.(jpe?g|png|gif|svg)\??.*$/,
-      use: 'url-loader?limit=8192&name=img/[name].[ext]'
-    }, {
-      test: /(\.css|\.scss|\.sass)$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [{
-          loader: 'css-loader',
-          options: {
-            importLoaders: 1
-          }
-        }, {
-          loader: 'postcss-loader',
-          options: {
-            plugins: function(webpack) {
-              return [
-                stylelint({
-                  config: stylelintRules,
-                  failOnError: true
-                }),
-                require('autoprefixer'),
-              ];
+    rules: [
+      /*{
+            enforce: 'pre',
+            test: /\.js?$/,
+            exclude: /node_modules/,
+            use: [{ loader: 'eslint-loader', options: {} }],
+          }, */
+      {
+        test: /\.json$/,
+        use: 'json-loader'
+      }, {
+        test: /\.jsx?$/,
+        exclude: /(node_modules)/,
+        use: [{ loader: 'babel-loader', options: { presets: ['es2015', 'react', 'stage-2'] } }],
+      }, {
+        test: /\.(woff|woff2|eot|ttf|otf)\??.*$/,
+        use: 'url-loader?limit=8192&name=font/[name].[ext]'
+      }, {
+        test: /\.(jpe?g|png|gif|svg)\??.*$/,
+        use: 'url-loader?limit=8192&name=img/[name].[ext]'
+      }, {
+        test: /(\.css|\.scss|\.sass)$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1
             }
-          }
-        }, {
-          loader: 'sass-loader',
-          options: {}
-        }]
-      })
-    }]
+          }, {
+            loader: 'postcss-loader',
+            options: {
+              plugins: function(webpack) {
+                return [
+                  stylelint({
+                    config: stylelintRules,
+                    failOnError: true
+                  }),
+                  require('autoprefixer'),
+                ];
+              }
+            }
+          }, {
+            loader: 'sass-loader',
+            options: {}
+          }]
+        })
+      }
+    ]
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
@@ -80,7 +86,7 @@ var config = module.exports = {
     }),
     new ManifestPlugin({
       fileName: 'rev-manifest.json'
-    })//,
+    }) //,
     // new CopyWebpackPlugin([
     //   { from: PATH.ROOT_PATH + 'app/frontend/vendor/', to: PATH.ROOT_PATH + 'public/assets/vendor/' },
     // ])

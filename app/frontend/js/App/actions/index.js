@@ -25,6 +25,12 @@ export const setCurrentUser = (currentUser) => ({
   currentUser
 });
 
+export const SET_INDEX_CONTENT = 'SET_INDEX_CONTENT';
+export const setIndexContent = (indexContent) => ({
+  type: SET_INDEX_CONTENT,
+  indexContent
+});
+
 export const SET_MODAL_CONTENT_NAME = 'SET_MODAL_CONTENT_NAME';
 export const setModalContentName = (modalContentName) => ({
   type: SET_MODAL_CONTENT_NAME,
@@ -101,12 +107,6 @@ export const SET_ARTICLE_CATEGORY_LIST_TOTAL_PAGE = 'SET_ARTICLE_CATEGORY_LIST_T
 export const setArticleCategoryListTotalPage = (articleCategoryListTotalPage) => ({
   type: SET_ARTICLE_CATEGORY_LIST_TOTAL_PAGE,
   articleCategoryListTotalPage
-});
-
-export const SET_PORTFOLIO_TYPE = 'SET_PORTFOLIO_TYPE';
-export const setPortfolioType = (portfolioType) => ({
-  type: SET_PORTFOLIO_TYPE,
-  portfolioType
 });
 
 export const SET_IS_NOT_FOUND = 'SET_IS_NOT_FOUND';

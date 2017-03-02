@@ -8,9 +8,17 @@ import { combineReducers, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { reducer } from '../frontend/js/App/reducers/index';
 import Index from '../frontend/js/App/index.js';
+import helper from './helper';
 
 const index = async (ctx, _next) => {
-  const prerenderHtml = await handleRender(ctx.state.preloadedState, <Index/>);
+  let query = _.merge(query, { uniqueKey: 'instruction' });
+  let select = ['title', 'uniqueKey', 'author', 'preface', 'desc', 'content', 'articleCategory', 'sequence', 'cover', 'type', 'tag', 'isBanned', 'isPrivate', 'isAdminOnly', 'createdAt', 'updatedAt', 'createdBy', 'updatedBy'];
+  let populate = 'createdBy';
+  let sort = { sequence: 1 };
+  let res = await helper.getArticles(query, select, sort, true, populate);
+  const indexContent = res.data[0].content;
+  let preloadedState = _.merge(ctx.state.preloadedState, { indexContent });
+  const prerenderHtml = await handleRender(preloadedState, <Index/>);
   const locals = {
     title: 'MengoX',
     nav: 'index',

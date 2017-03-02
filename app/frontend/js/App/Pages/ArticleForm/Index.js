@@ -210,6 +210,10 @@ class ArticleForm extends Component {
     this.setState({articleCategory});
   }
 
+  onCheckChange() {
+
+  }
+
   fetchArticleCategoryOptions() {
     Utils.initSpin('spin-loader');
     this.fetchArticleCategoryOptionsApi().then((res) => {
@@ -452,6 +456,7 @@ class ArticleForm extends Component {
                         type="checkbox"
                         className="form-check-input"
                         onClick={this.setIsUseUrl.bind(this, !isUseUrl)}
+                        onChange={this.onCheckChange.bind(this)}
                         checked={isUseUrl}
                       />
                       &nbsp;<span className="">{`${LANG_ARTICLE['use-image-url']}`}</span>
@@ -656,6 +661,7 @@ class ArticleForm extends Component {
                         type="checkbox"
                         className="form-check-input"
                         onClick={this.setIsBanned.bind(this, !isBanned)}
+                        onChange={this.onCheckChange.bind(this)}
                         checked={isBanned}
                       />
                       &nbsp;<span className="">{`${LANG_ARTICLE['banned']}`}</span>
@@ -667,6 +673,7 @@ class ArticleForm extends Component {
                         type="checkbox"
                         className="form-check-input"
                         onClick={this.setIsPrivate.bind(this, !isPrivate)}
+                        onChange={this.onCheckChange.bind(this)}
                         checked={isPrivate}
                       />
                       &nbsp;<span className="">{`${LANG_ARTICLE['private']}`}</span>
@@ -678,6 +685,7 @@ class ArticleForm extends Component {
                         type="checkbox"
                         className="form-check-input"
                         onClick={this.setIsAdminOnly.bind(this, !isAdminOnly)}
+                        onChange={this.onCheckChange.bind(this)}
                         checked={isAdminOnly}
                       />
                       &nbsp;<span className="">{`${LANG_ARTICLE['admin-only']}`}</span>

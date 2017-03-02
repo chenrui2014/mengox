@@ -19,6 +19,15 @@ export function currentUser(currentUser = DEFAULT_STATE.currentUser, action) {
   }
 }
 
+export function indexContent(indexContent = DEFAULT_STATE.indexContent, action) {
+  switch (action.type) {
+    case ACTION.SET_INDEX_CONTENT:
+      return action.indexContent
+    default:
+      return indexContent;
+  }
+}
+
 export function isFetching(isFetching = DEFAULT_STATE.isFetching, action) {
   switch (action.type) {
     case ACTION.SET_IS_FETCHING:
@@ -143,15 +152,6 @@ export function articleCategoryListTotalPage(articleCategoryListTotalPage = DEFA
       return action.articleCategoryListTotalPage;
     default:
       return articleCategoryListTotalPage;
-  }
-}
-
-export function portfolioType(portfolioType = DEFAULT_STATE.portfolioType, action) {
-  switch (action.type) {
-    case ACTION.SET_PORTFOLIO_TYPE:
-      return action.portfolioType;
-    default:
-      return portfolioType;
   }
 }
 

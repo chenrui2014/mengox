@@ -1,7 +1,6 @@
 import Login from '../components/Login/Index';
 import Signup from '../components/Signup/Index';
 import MyAccount from '../components/MyAccount/Index';
-import Portfolio from '../components/Portfolio/Index';
 import Empty from '../components/Empty/Index';
 
 export const DEFAULT_STATE = {
@@ -15,6 +14,7 @@ export const DEFAULT_STATE = {
   article: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.article !== 'undefined' ? __PRELOADED_STATE__.article : null,
   articleCategoryOptions: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.articleCategoryOptions !== 'undefined' ? __PRELOADED_STATE__.articleCategoryOptions : null,
   articleList: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.articleList !== 'undefined' ? __PRELOADED_STATE__.articleList : null,
+  indexContent: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.indexContent !== 'undefined' ? __PRELOADED_STATE__.indexContent : null,
   articleListCurrentPage: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.articleListCurrentPage !== 'undefined' ? __PRELOADED_STATE__.articleListCurrentPage : 0,
   articleListTotalPage: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.articleListTotalPage !== 'undefined' ? __PRELOADED_STATE__.articleListTotalPage : 0,
   articleCategoryList: typeof __PRELOADED_STATE__ !== 'undefined' && typeof __PRELOADED_STATE__.articleList !== 'undefined' ? __PRELOADED_STATE__.articleList : null,
@@ -22,7 +22,6 @@ export const DEFAULT_STATE = {
   articleCategoryListCurrentPage: 0,
   articleCategoryListTotalPage: 0,
   isNotFound: false,
-  portfolioType: 'graphic_design',
 };
 
 export const MODAL_CONTENT_COMPONENT_OBJECT = {
@@ -33,7 +32,6 @@ export const MODAL_CONTENT_COMPONENT_OBJECT = {
 };
 
 export const SLIDE_MODAL_CONTENT_COMPONENT_OBJECT = {
-  Portfolio,
   Empty,
 };
 

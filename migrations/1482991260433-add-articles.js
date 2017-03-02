@@ -4,20 +4,22 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.Types.ObjectId;
 var id = mongoose.Types.ObjectId('56cb91bdc3464f14678934ca');
 
+var content = 'Welcom to MengoX';
+
 var articleList = [{
-  title:' title',
-  uniqueKey: 'title',
+  title:' instruction',
+  uniqueKey: 'instruction',
   author: 'admin',
   preface: 'preface',
   desc: 'desc',
-  content: 'content',
+  content: content,
   cover: '',
   type: 0,
   tag: '',
   isBanned: false,
   isPrivate: false,
   isAdminOnly: true,
-  articleCategory: 'jottings',
+  articleCategory: 'jotting',
   sequence: 1,
   createdBy: id,
   updatedBy: id,
