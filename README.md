@@ -1,5 +1,5 @@
-# mengox
-koa mongodb webpack2 react-router cms
+# MengoX
+koa mongodb webpack2 react-router MVC CMS
 # Local machine
 Start mongodb
 
@@ -58,7 +58,7 @@ server {
   root ~/www/mengox/public;
 location / {
     index  index.html index.htm;
-    proxy_pass http://edwardxiao;
+    proxy_pass http://mengox;
     proxy_set_header Host $http_host;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
