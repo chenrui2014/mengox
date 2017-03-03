@@ -17,7 +17,7 @@
     "webpack_dll_prod": "NODE_ENV=production webpack --config app/frontend/webpack/vendor-bundles.webpack.config.production.js -p",
     "build_dev": "rm -rf public/assets && npm run webpack_dll_dev && npm run webpack_dev",
     "build_prod": "rm -rf public/assets && npm run webpack_dll_prod && npm run webpack_prod",
-    "deploy": "git checkout master && git pull origin master && rm -rf node_modules && npm i && npm run build_prod && npm run pm2:restart",
+    "deploy": "git checkout master && git pull origin master && rm -rf node_modules && npm i && npm run build_prod && npm run pm2:restart mengox",
     "migrate_up": "./node_modules/.bin/migrate up",
     "migrate_down": "./node_modules/.bin/migrate down"
   },
