@@ -5,7 +5,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const stylelint = require('stylelint');
 const stylelintRules = require('../../../stylelint.config.js');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var config = module.exports = {
   context: PATH.ROOT_PATH,
