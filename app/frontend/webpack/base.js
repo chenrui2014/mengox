@@ -86,9 +86,10 @@ var config = module.exports = {
     }),
     new ManifestPlugin({
       fileName: 'rev-manifest.json'
-    }) //,
-    // new CopyWebpackPlugin([
-    //   { from: PATH.ROOT_PATH + 'app/frontend/vendor/', to: PATH.ROOT_PATH + 'public/assets/vendor/' },
-    // ])
+    }),
+    new CopyWebpackPlugin([
+      { from: PATH.ROOT_PATH + 'app/frontend/vendor/', to: PATH.ROOT_PATH + 'public/assets/vendor/' },
+      { from: PATH.ROOT_PATH + 'app/frontend/site/', to: PATH.ROOT_PATH + 'public/assets/site/' },
+    ])
   ]
 };
