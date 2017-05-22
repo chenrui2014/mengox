@@ -1,7 +1,7 @@
 # MengoX
 koa mongodb webpack2 react-router MVC CMS
 
-This project is enlightened by 
+This project is inspired by 
 <a href="https://github.com/embbnux/kails" style="color:#14a9f5;">embbnux/Kails</a> and <a href="https://github.com/ecmadao/hacknical" style="color:#14a9f5;">ecmadao/hacknical</a>, which are fantastic open source projects.
 
 # Examples
